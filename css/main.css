@@ -1,0 +1,1128 @@
+
+@charset "UTF-8";
+/* CSS Document */
+
+/*SWATCHES
+dark blue background #192530
+off white text #EEEEEE
+link color/ highlight text #2B8BC1
+orange #E74C3C
+*/
+
+
+a:link {color: #2B8BC1;}
+a:visited {color: #2B8BC1;}
+a:hover {color: #4DB9E8;}
+
+	a {
+    -webkit-transition:color .5s;
+    -moz-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+	}
+
+a:active { color: #4DB9E8;}
+a{text-decoration: none;}
+
+footer a:link {color: #EEEEEE;}
+footer a:visited {color: #EEEEEE;}
+footer a:hover {color: #192530;}
+footer a:active { color: #192530;}
+
+
+/*===============================================
+=================================================
+=================================================
+===== CSS INVOLVING THE PARTICLE BACKGROUND 
+		
+		Note: make sure that the nav and container
+		are both postion:relative; otherwise the
+		particles will sit on top of the content.
+
+=================================================
+=================================================
+=================================================*/
+
+
+canvas{
+	position: fixed;
+	top:0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+ /*overflow: hidden;*/
+}
+
+
+body{
+	font-family: avenir, helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 29px;
+	background-color: #192530;
+	color: #EEEEEE;
+  	-webkit-font-smoothing: antialiased;
+}
+
+
+#main {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 999;
+
+
+}
+
+#particles {
+  width: 100%;
+  z-index: 1;
+  /*height: 100%;
+  overflow: hidden;*/
+}
+
+/*===============================================
+=================================================
+=================================================
+============= GENERAL PAGE STYLES ===============
+=================================================
+=================================================
+=================================================*/
+
+#container{
+	width: 960px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	top: 0;
+}
+
+	nav{
+		width: 960px;
+		height: 60px;
+		margin: 0 auto;
+		font-weight: 500;
+		position: relative; 
+	}
+
+		nav img {
+			margin: 15px 0 0 0;
+			display: inline;
+			float: left;
+			width: 38px;
+		}
+
+			nav .logo{
+				position: relative;
+			}
+
+			nav #home-logo{
+				visibility: hidden;
+			}
+
+			nav #where-when{
+				position: absolute;
+				left: 0px;
+				top: 20px;
+				width: 130px;
+				-ms-transform: rotate(-20deg); /* IE 9 */
+   				-webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    			transform: rotate(-20deg);
+			}
+
+		nav #nav-links{
+			height: 100%;
+			float: left;
+			margin:0 0 0 170px;
+		}
+
+			nav li{
+				display: inline;
+				float: left;
+				margin: 20px 55px 0 0;
+				font-size: 24px;
+			}
+
+		nav .social-media-buttons{
+			height: 100%;
+			float: right;
+		}
+
+		.social-media-buttons img{
+			margin: 15px 10px 0 0;
+		}
+
+			.facebook{
+				height: 34px;
+			}
+
+			.twitter{
+				height: 34px;
+				width: 38px;
+				padding: 0 3px 0 0;
+			}
+
+			.instagram{
+				height: 32px;
+				padding: 1px 0 0 0;
+			}
+
+/*=================================
+========= BUTTONS =================
+=================================*/
+.orange-button{
+	background-color: #E74C3C;
+	border-color: #FFF;
+	border-radius: 7px;
+	height: 55px;
+	width: 135px;
+	margin: 0 auto 0 auto;
+	color: #EEEEEE;
+}
+
+.orange-button:hover{
+	background-color: #fa4a3a;
+	color: #192530;
+	-webkit-transition:color .5s;
+    -moz-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+
+	.orange-button h4{
+		padding: 15px 0 0 0;
+		text-align: center; 
+	}
+
+h1{
+	font-size: 48px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 58px;
+}
+
+h2{
+	font-size: 24px;
+}
+
+	#above-footer{
+		height: 10px;
+		margin: 0 0 300px 0;
+	}
+
+	footer{
+		height: 280px;
+		width: 100%;
+		background-image: url('../images/footer-planet.svg');
+		background-size:cover;
+		font-weight: 500;
+		left: 0;
+		bottom: 0;
+		position: absolute;
+	}
+
+	#footer-container{
+		width: 960px;
+		margin: 0 auto;
+	}
+
+		footer .social-media-buttons{
+			margin: 0 auto 0 auto;
+			width: 136px;
+		}
+
+			footer .twitter{
+				height: 40px;
+				padding: 6px 0 0 0;
+			}
+
+			footer .instagram{
+				height: 39px;
+			}
+
+		footer #footer-links{
+			height: 50px;
+			float: left;
+			margin:0 0 0 215px;
+		}
+
+			footer li{
+				display: inline;
+				float: left;
+				margin: 20px 55px 0 0;
+				font-size: 24px;
+			}
+		
+	footer p{
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+		footer #address{
+			float: left;
+			width: 230px;
+			height: 80px;
+			margin: 40px 0 0 215px;
+		}
+
+		footer #contact{
+			float: left;
+			width: 254px;
+			height: 69px;
+			margin:  40px 0 0 80px;
+		}
+
+		footer #disclaimer{
+			clear: both;
+			width: 750px;
+			padding: 15px 0 0 0;
+			margin: 0 0 0 130px;
+		}
+
+/*===============================================
+=================================================
+=================================================
+================== HOME PAGE ====================
+=================================================
+=================================================
+=================================================*/
+
+	#home-page-intro{
+		padding-top: 1px;
+   		margin-top: -1px;
+   		width: 800px;
+   		margin:  0 auto;
+   		position: relative;
+	}
+
+	#home-page-intro #big-pluto{
+		height: 390px;
+		width: 800px;
+		margin: 100px auto 25px auto;
+		display: block;
+		visibility: hidden;
+	}
+
+		#ticket-button-header{
+			position: absolute;
+			top: 230px;
+			left:345px;
+		}
+
+	#home-page-intro h1{
+		width: 460px;
+		margin:  0 auto 145px auto;
+	}
+
+		#home-page-intro #intro-body{
+			width: 780px;
+			margin: 0 auto;
+		}
+
+			#intro-body p{
+				margin: 0 0 37px 0;
+			}
+
+	#videos{
+		width: 810px;
+		height: 345px;
+		margin: 150px auto 0 auto;
+	}
+
+		h3{
+			font-size: 24px;
+			line-height: 28px;
+			margin: 20px 0 0 0;
+			width: 245px;
+			font-weight: 600;
+		}
+
+		.video-box{
+			height: 143px;
+			width: 220px;
+			margin: 0 0 30px 0;
+		}
+
+			.video-box img{
+				margin: 0 0 0 5px;
+				height: 130px;
+			}
+
+		.video-container{
+			width: 220px;
+			height: 100%;
+			float: left;
+		}
+
+			.video-container p{
+				width: 235px;
+				margin: 15px 0 0 0;
+			}
+
+			#video2{
+				margin: 0 0 0 75px;
+			}
+
+			#video3{
+				margin: 0 0 0 75px;
+			}
+
+	#ticket-button-footer{
+		margin: 150px auto 400px auto;
+	}
+
+/*===============================================
+=================================================
+=================================================
+=== LIVESTREAM PAGE ================== ======s==
+=================================================
+=================================================
+=================================================*/
+
+	#livestream-page-intro{
+		width: 620px;
+		padding: 157px 0 0 0;
+		margin: 0 auto 0 auto;
+		height: 550px;
+	}
+
+		#livestream-page-intro h1{
+			width: 580px;
+			margin: 0 auto 68px auto;
+		}
+
+		#livestream-page-intro p{
+			margin: 0 0 34px 0;
+		}
+
+	#tyson-section{
+		height: 820px;
+		width: 620px;
+		margin: 0 auto 0 auto;
+	}
+
+		.section-heading{
+			padding: 200px 0 0 0;
+		}
+
+		#tyson-section .tyson-h1{
+			width: 500px;
+			margin: 0 auto 0 auto;
+		}
+
+		#tyson-section #tyson-photo{
+			width: 200px;
+			margin: 50px 0 50px 200px; /*this should be 0 auto but it's not working... */
+		}
+
+		#tyson-section p{
+			margin: 0 0 30px 0;
+			width: 630px;
+		}
+
+	#videos{
+		width: 780px;
+		height: 280px;
+		margin: 250px auto 0 auto;
+	}
+
+		h3{
+			font-size: 24px;
+			line-height: 28px;
+			margin: 20px 0 0 0;
+			width: 245px;
+		}
+
+		#videos .video-container{
+			width: 220px;
+			height: 100%;
+			float: left;
+		}
+
+			#video2{
+				margin: 0 0 0 60px;
+			}
+
+			#video3{
+				margin: 0 0 0 60px;
+			}
+
+	#cant-make-it{
+		height: 400px;
+		width: 645px;
+		margin: 180px auto 450px auto;
+	}
+
+		#cant-make-it h1{
+			margin: 0 0 50px 0;
+		}
+
+		#cant-make-it p{
+			margin: 0 0 47px 0;
+			width: 650px;
+		}
+
+			#cant-make-it #livestream{
+				padding: 0 20px;
+			}
+
+			#livestream:hover{
+				color: #192530;
+			}
+
+/*===============================================
+=================================================
+=================================================
+=== PLUTO TIMELINE PAGE ================== ======s
+=================================================
+=================================================
+=================================================*/
+
+ #pluto-page-intro h1{
+ 	margin: 150px;
+ }
+
+.pluto-timeline {
+	height: 4200px;
+	position: relative;
+}
+
+#time-line{
+	width: 1px;
+	height: 91%;
+	background-color: #EEEEEE;
+	margin: 0 0 0 18px;
+	position: absolute;
+}
+
+.pluto-timeline img{
+	height: 40px;
+	width: auto;
+	position: absolute;
+	margin: 5px 0 0 0;
+}
+
+.pluto-timeline-content{
+	width: 800px;
+	margin:0 0 600px 60px;
+	padding: 15px;
+}
+
+	.pluto-timeline-content h2{
+		display: inline;
+		float: left;
+	}
+
+	.pluto-timeline-content .year{
+		margin: 0 0 0 50px;
+	}
+
+	.pluto-timeline-content p{
+		display: inline-block;
+		margin: 20px 0 0 0;
+	}
+
+/*===============================================
+=================================================
+=================================================
+=== TICKET PAGE ================== ======s==
+=================================================
+=================================================
+=================================================*/
+
+#ticket-page-intro{
+	margin: 150px 0 0 0;
+}
+
+/*form styles*/
+#msform {
+	height: 600px;
+	width: auto;
+	padding: 0 0 200px 0;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#msform fieldset {
+	width: 80%;
+	margin: 50px 10% 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #2B8BC1;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2B8BC1;
+	font-size: 14px;
+	background-color: #192530;
+}
+
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #E74C3C;
+	color: white;
+	border: 0 none;
+	border-radius: 6px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	/*box-shadow: 0 0 0 2px #192530, 0 0 0 3px #E74C3C;*/
+	background: #fa4a3a;
+	color: #192530;
+	font-weight: bold;
+}
+/*headings*/
+.fs-title {
+	font-size: 24px;
+	text-transform: uppercase;
+	color: #EEEEEE;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-size: 21px;
+	color: #EEEEEE;
+	width: 400px;
+	text-align: left;
+	line-height: 5px;
+	margin: 30px 0 30px 0;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #EEEEEE;
+	text-transform: uppercase;
+	font-size: 14px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+	font-weight: bold;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 14px;
+	color: #333;
+	background: #EEEEEE;
+	border-radius: 50px;
+	margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 14px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #2B8BC1;
+	color: white;
+}
+
+#submission-info h3{
+	text-align: center;
+	margin: 35px auto 35px auto;
+}
+
+#submission-info p{
+	text-align: left;
+	width: 220px;
+	margin: 0 auto;
+}
+
+button{
+	margin: 500px;
+}
+/*===============================================
+=================================================
+=================================================
+================== FAQ PAGE ====================
+=================================================
+=================================================
+=================================================*/
+
+#faq-list{
+	height: 100px;
+	margin: 150px 0 0 0;
+}
+.cd-faq {
+  width: 800px;
+  max-width: 1024px;
+  margin: 25px 7%;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.cd-faq:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq {
+    position: relative;
+    box-shadow: none;
+    margin: 25px 7%;
+    width: 600px;
+    font-size: 18px;
+
+  }
+}
+
+.cd-faq-categories a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 28px 0 16px;
+  background-color: #4e5359;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  white-space: nowrap;
+  border-bottom: 1px solid #555b61;
+  text-overflow: ellipsis;
+}
+.cd-faq-categories a::before, .cd-faq-categories a::after {
+  /* plus icon on the right */
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: inline-block;
+  height: 1px;
+  width: 10px;
+  background-color: #7f868e;
+}
+.cd-faq-categories a::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.cd-faq-categories li:last-child a {
+  border-bottom: none;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-categories {
+    width: 20%;
+    float: left;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+  .cd-faq-categories a {
+    padding-left: 24px;
+    padding: 0 24px;
+    -webkit-transition: background 0.2s, padding 0.2s;
+    -moz-transition: background 0.2s, padding 0.2s;
+    transition: background 0.2s, padding 0.2s;
+  }
+  .cd-faq-categories a::before, .cd-faq-categories a::after {
+    display: none;
+  }
+  .no-touch .cd-faq-categories a:hover {
+    background: #555b61;
+  }
+  .no-js .cd-faq-categories {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-faq-categories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    z-index: 2;
+  }
+  .cd-faq-categories a::before {
+    /* decorative rectangle on the left visible for the selected item */
+    display: block;
+    top: 0;
+    right: auto;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #a9c056;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .cd-faq-categories .selected {
+    background: #42464b !important;
+  }
+  .cd-faq-categories .selected::before {
+    opacity: 1;
+  }
+  .cd-faq-categories.is-fixed {
+    /* top and left value assigned in jQuery */
+    position: fixed;
+  }
+  .no-js .cd-faq-categories {
+    position: relative;
+  }
+}
+
+.cd-faq-items {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  background: #232f3b;
+  padding: 0 5% 1em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0) translateX(100%);
+  -moz-transform: translateZ(0) translateX(100%);
+  -ms-transform: translateZ(0) translateX(100%);
+  -o-transform: translateZ(0) translateX(100%);
+  transform: translateZ(0) translateX(100%);
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  transition: transform .3s;
+}
+.cd-faq-items.slide-in {
+  -webkit-transform: translateZ(0) translateX(0%);
+  -moz-transform: translateZ(0) translateX(0%);
+  -ms-transform: translateZ(0) translateX(0%);
+  -o-transform: translateZ(0) translateX(0%);
+  transform: translateZ(0) translateX(0%);
+}
+.no-js .cd-faq-items {
+  position: static;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-items {
+    position: static;
+    height: auto;
+    width: 78%;
+    float: right;
+    overflow: visible;
+    -webkit-transform: translateZ(0) translateX(0);
+    -moz-transform: translateZ(0) translateX(0);
+    -ms-transform: translateZ(0) translateX(0);
+    -o-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    padding: 0;
+    background: transparent;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-faq-items {
+    float: none;
+    width: 100%;
+    padding-left: 220px;
+  }
+  .no-js .cd-faq-items {
+    padding-left: 0;
+  }
+}
+
+.cd-close-panel {
+  position: fixed;
+  top: 5px;
+  right: -100%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: right 0.4s;
+  -moz-transition: right 0.4s;
+  transition: right 0.4s;
+}
+.cd-close-panel::before, .cd-close-panel::after {
+  /* close icon in CSS */
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  display: inline-block;
+  height: 3px;
+  width: 18px;
+  background: #6c7d8e;
+}
+.cd-close-panel::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cd-close-panel::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.cd-close-panel.move-left {
+  right: 2%;
+}
+@media only screen and (min-width: 768px) {
+  .cd-close-panel {
+    display: none;
+  }
+}
+
+.cd-faq-group {
+  /* hide group not selected */
+  display: none;
+}
+.cd-faq-group.selected {
+  display: block;
+}
+.cd-faq-group .cd-faq-title {
+  background: transparent;
+  box-shadow: none;
+  margin: 1em 0;
+}
+.no-touch .cd-faq-group .cd-faq-title:hover {
+  box-shadow: none;
+}
+.cd-faq-group .cd-faq-title h2 {
+  text-transform: uppercase;
+  color: #bbbbc7;
+}
+.no-js .cd-faq-group {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-group {
+    /* all groups visible */
+    display: block;
+  }
+  .cd-faq-group > li {
+    background: #232f3b;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+  }
+  .no-touch .cd-faq-group > li:hover {
+    box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
+  }
+  .cd-faq-group .cd-faq-title {
+    margin: 2em 0 1em;
+  }
+  .cd-faq-group:first-child .cd-faq-title {
+    margin-top: 0;
+  }
+}
+
+.cd-faq-trigger {
+  position: relative;
+  display: block;
+  margin: 1.6em 0 .4em;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-trigger {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 24px 72px 24px 24px;
+  }
+  .cd-faq-trigger::before, .cd-faq-trigger::after {
+    /* arrow icon on the right */
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    height: 2px;
+    width: 13px;
+    background: #cfdca0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .cd-faq-trigger::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 32px;
+  }
+  .cd-faq-trigger::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .content-visible .cd-faq-trigger::before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .content-visible .cd-faq-trigger::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.cd-faq-content p {
+  font-size: 18px;
+  color: #eee;
+  margin: 12px 0 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-content {
+    display: none;
+    padding: 0 24px 30px;
+  }
+  .cd-faq-content p {
+    line-height: 1.6;
+  }
+  .no-js .cd-faq-content {
+    display: block;
+  }
+}
+
+/*===============================================
+=================================================
+=================================================
+=== SHIRT  PAGE ================== ======
+=================================================
+=================================================
+=================================================*/
+
+#shirt-page-intro{
+	height: 1000px;
+	margin: 150px 0 800px 0;
+}
+
+	#shirt-page-intro h1{
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	#contest-rules{
+		margin: 200px auto 00 auto;
+		display: block;
+	}
+
+#shirt-pic{
+	margin: 0 auto;
+	height: 350px;
+	display: block;
+	padding: 50px;
+}
+
+/*===============================================
+=================================================
+=================================================
+=== STREAM PAGE ========================= ======s
+=================================================
+=================================================
+=================================================*/
+
+.stream{
+	height: 900px;
+	margin: 150px 0 400px 0;
+}
+
+		.stream p{
+			margin: 50px auto 36px auto;
+			back
+		}
+
+/*===============================================
+=================================================
+=================================================
+=== MAP / DIRECTIONS  PAGE ================== ======
+=================================================
+=================================================
+=================================================*/
+
+.map h1{
+	margin: 150px 0 150px 0;
+}
+
+#above-footer{
+ 	height: 1px;
+ 	margin: 0 0 400px 0;
+
+}
+.fluid-wrapper{
+	height: 500px;
+}
+
+.fluid-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+
+

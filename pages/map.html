@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--start head ============================ -->
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome Back, Pluto!</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="css/animations.css">
+
+        <!--jquery library-->
+        <script type='text/javascript' src='../js/jquery-1.11.1.min.js'></script>
+
+		<!--partical background-->
+  		<script type='text/javascript' src='../js/jquery.particleground.min.js'></script>
+  		<script type='text/javascript' src='../js/demo.js'></script>
+
+  		<!--sweet alert-->
+  		<script src="../lib/sweet-alert.js"></script>
+ 		<link rel="stylesheet" href="../lib/sweet-alert.css">
+ 		
+ 		<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../images/favicon.ico" type="image/x-icon">  
+    </head><!--end head ============================ -->
+<!-- STREAM PAGE-->
+<!--start body ============================ -->
+<body id="particles">
+
+<div id="main">
+
+<nav>
+
+		<a href="../index.html">
+		  <img src="../images/logo.svg" alt="HTML tutorial" class="logo">
+		  <img src="../images/where-when-nav.svg" id="where-when" alt="Smithsonian Air and Space Museum, July 10th, 2015">
+		</a>
+
+
+		<div id="nav-links">
+		<ul>
+			<li><a href="pluto.html">PLUTO</a></li>
+			<li><a href="livestream.html">LIVESTREAM</a></li>
+			<li><a href="tickets.html">TICKETS</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+		</ul>
+		</div>
+
+		<div class="social-media-buttons">
+		<a href="http://facebook.com" target="_blank">
+		  <img src="../images/facebook.svg" alt="HTML tutorial" class="facebook">
+		</a>
+		<a href="http://twitter.com" target="_blank">
+		  <img src="../images/twitter.svg" alt="HTML tutorial" class="twitter">
+		</a>
+		<a href="http://instagram.com" target="_blank">
+		  <img src="../images/instagram.svg" alt="HTML tutorial" class="instagram">
+		</a>
+		</div>
+
+</nav>
+
+<div id="container" class="map">
+
+<h1>Directions</h1>
+
+</div><!--ends container div-->
+
+<div class="fluid-wrapper" id="map">
+<iframe src="https://mapsengine.google.com/map/embed?mid=zwrwMuTeI3Wg.kjLGjGruqfwM" width="640" height="480"></iframe>
+</div>
+
+<div id="above-footer">
+</div>
+<footer>
+	<div id="footer-container">
+		<div class="social-media-buttons">
+        <a href="http://facebook.com" target="_blank">
+          <img src="../images/facebook-footer.svg" alt="HTML tutorial" class="facebook">
+        </a>
+        <a href="http://twitter.com" target="_blank">
+          <img src="../images/twitter-footer.svg" alt="HTML tutorial" class="twitter">
+        </a>
+        <a href="http://instagram.com" target="_blank">
+          <img src="../images/instagram-footer.svg" alt="HTML tutorial" class="instagram">
+        </a>
+        </div>
+
+		<div id="footer-links">
+		<ul>
+			<li><a href="pluto.html">PLUTO</a></li>
+			<li><a href="livestream.html">LIVESTREAM</a></li>
+			<li><a href="tickets.html">TICKETS</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+		</ul>
+		</div>
+
+		<div id="address">
+			<p>Smithsonian Air and Space Museum</p>
+			<p>600 Independence Ave SW,</p>
+			<p>Washington, DC 20560</p>
+			<a href="map.html"><p>Need Directions?</p></a>
+		</div>
+
+		<div id="contact">
+			<p>Air and Space Museum (202) 633 2214</p>
+			<p>Air and Space Events (202) 633 1000</p>
+			<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"><p>Email: NASM-VisitorServices@si.edu</p></a>
+		</div>
+
+		<p id="disclaimer">This event is fictional and was created for educational purposes. <a href="htpp://alicepackarddesign.com" target="_blank">Alice Packard</a> is the designer responsible for this.</p>
+	</div>
+	</footer>
+
+</div><!-- ends 'main' div-->
+<script>
+var el = $('#map');
+var map;
+
+function enableScrollingWithMouseWheel() {
+    map.setOptions({ scrollwheel: true });
+}
+
+function disableScrollingWithMouseWheel() {
+    map.setOptions({ scrollwheel: false });
+}
+
+function init() {
+    map = new google.maps.Map(el[0], {
+        zoom: 10,
+        center: new google.maps.LatLng(47.49840560, 19.04075779),
+        scrollwheel: false // disableScrollingWithMouseWheel as default
+    });
+
+    google.maps.event.addListener(map, 'mousedown', function(){
+        enableScrollingWithMouseWheel()
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', init);
+
+$('body').on('mousedown', function(event) {
+    var clickedInsideMap = $(event.target).parents('#map').length > 0;
+
+    if(!clickedInsideMap) {
+        disableScrollingWithMouseWheel();
+    }
+});
+
+$(window).scroll(function() {
+    disableScrollingWithMouseWheel();
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
